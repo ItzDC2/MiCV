@@ -144,7 +144,8 @@ public class MainViewController implements Initializable {
 		if(!guardado) {
 			guardando = true;
 			onGuardarComoAction(e);
-			guardado = true;
+			if(f != null)
+				guardado = true;
 		} else {
 			if(f != null) {
 				String json = gson.toJson(cv.get(), CV.class);
@@ -156,7 +157,6 @@ public class MainViewController implements Initializable {
 			} 
 		}
 		guardando = false;
-		guardado = false;
 	}
 	
 	@FXML

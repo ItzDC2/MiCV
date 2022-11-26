@@ -76,7 +76,7 @@ public class ConocimientosTabController implements Initializable {
 		denominacionColumn.setCellFactory(TextFieldTableCell.forTableColumn());
 		nivelColumn.setCellFactory(ComboBoxTableCell.forTableColumn(Nivel.values()));
 		
-		// bindings
+		// bindingspens
 		conocimientosTableView.itemsProperty().bind(habilidadesProperty());
 		conocimientoSeleccionado.bind(conocimientosTableView.getSelectionModel().selectedItemProperty());
 		eliminarButton.disableProperty().bind(conocimientoSeleccionado.isNull());
