@@ -20,7 +20,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.BorderPane;
+import javafx.util.converter.LocalDateStringConverter;
 import model.Experiencia;
 
 public class ExperienciaTabController implements Initializable {
@@ -78,7 +80,10 @@ public class ExperienciaTabController implements Initializable {
 		empleadorColumn.setCellValueFactory(v -> v.getValue().empleadorProperty());
 		desdeColumn.setCellValueFactory(v -> v.getValue().desdeProperty());
 		hastaColumn.setCellValueFactory(v -> v.getValue().hastaProperty());
-
+		denominacionColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+		empleadorColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+		desdeColumn.setCellFactory(TextFieldTableCell.forTableColumn(new LocalDateStringConverter()));
+		hastaColumn.setCellFactory(TextFieldTableCell.forTableColumn(new LocalDateStringConverter()));
 	}
 
 	@FXML

@@ -21,6 +21,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.ComboBoxTableCell;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.BorderPane;
 import model.Conocimiento;
 import model.Idioma;
@@ -71,6 +73,9 @@ public class ConocimientosTabController implements Initializable {
 		denominacionColumn.setCellValueFactory(v -> v.getValue().denominacionProperty());
 		nivelColumn.setCellValueFactory(v -> v.getValue().nivelProperty());
 
+		denominacionColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+		nivelColumn.setCellFactory(ComboBoxTableCell.forTableColumn(Nivel.values()));
+		
 		// bindings
 		conocimientosTableView.itemsProperty().bind(habilidadesProperty());
 		conocimientoSeleccionado.bind(conocimientosTableView.getSelectionModel().selectedItemProperty());
