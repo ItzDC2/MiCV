@@ -25,8 +25,8 @@
                <right>
                   <VBox spacing="5.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button fx:id="addTelefonoButton" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Añadir" />
-                        <Button fx:id="removeTelefonoButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="addTelefonoButton" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAddTelefonoAction" text="Añadir" />
+                        <Button fx:id="removeTelefonoButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRemoveTelefonoAction" text="Eliminar" />
                      </children>
                      <padding>
                         <Insets left="5.0" />
@@ -49,8 +49,8 @@
                <right>
                   <VBox spacing="5.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button fx:id="addEmailButton" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Añadir" />
-                        <Button fx:id="removeEmailButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="addEmailButton" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAddEmailAction" text="Añadir" />
+                        <Button fx:id="removeEmailButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRemoveEmailAction" text="Eliminar" />
                      </children>
                      <padding>
                         <Insets left="5.0" />
@@ -73,8 +73,8 @@
                <right>
                   <VBox spacing="5.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button fx:id="addWebButton" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Añadir" />
-                        <Button fx:id="removeWebButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="addWebButton" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAddWebAction" text="Añadir" />
+                        <Button fx:id="removeWebButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRemoveWebAction" text="Eliminar" />
                      </children>
                      <padding>
                         <Insets left="5.0" />

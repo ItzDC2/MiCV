@@ -22,9 +22,9 @@
    <right>
       <VBox alignment="TOP_CENTER" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="addConocimientoButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Añadir conocimiento" />
-            <Button fx:id="addIdiomaButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Añadir idioma" />
-            <Button fx:id="eliminarButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Eliminar" />
+            <Button fx:id="addConocimientoButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAddConocimientoAction" text="Añadir conocimiento" />
+            <Button fx:id="addIdiomaButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAddIdiomaAction" text="Añadir idioma" />
+            <Button fx:id="eliminarButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEliminarAction" text="Eliminar" />
          </children>
          <padding>
             <Insets left="5.0" right="5.0" top="5.0" />

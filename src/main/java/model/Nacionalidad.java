@@ -1,14 +1,17 @@
 package model;
 
+import java.util.Objects;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import utils.StringUtils;
 
 public class Nacionalidad {
 
 	private StringProperty denominacion = new SimpleStringProperty();
 
-	public Nacionalidad(StringProperty denominacion) {
-		this.denominacion = denominacion;
+	public Nacionalidad(String denominacion) {
+		this.denominacion.set(StringUtils.capitalize(denominacion));
 	}
 	
 	public StringProperty denominacionProperty() {
@@ -25,9 +28,21 @@ public class Nacionalidad {
 	
 	@Override
 	public String toString() {
-		char c = denominacion.get().charAt(0);
-		String str = denominacion.get().substring(1, denominacion.get().length());
-		return Character.toUpperCase(c) + str;
+		return Character.toUpperCase(denominacion.get().charAt(0)) + denominacion.get().substring(1);
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Nacionalidad other = (Nacionalidad) obj;
+		return Objects.equals(denominacion.get(), other.denominacion.get());
+	}
+	
+	
 	
 }

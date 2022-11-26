@@ -99,19 +99,19 @@
             </HBox>
             <VBox spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
                <children>
-                  <Button fx:id="addNacionalidadButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="+">
+                  <Button fx:id="addNacionalidadButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAddNacionalidadAction" text="+">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="removeNacionalidadButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="-">
+                  <Button fx:id="removeNacionalidadButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRemoveNacionalidadAction" text="-">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </VBox.margin>
                   </Button>
                </children>
             </VBox>
-            <TextArea GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.vgrow="NEVER" />
+            <TextArea fx:id="inputDireccion" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.vgrow="NEVER" />
             <TextField fx:id="inputDNI" GridPane.columnIndex="1" />
             <TextField fx:id="inputNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="inputApellidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />

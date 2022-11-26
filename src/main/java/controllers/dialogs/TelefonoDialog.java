@@ -58,7 +58,7 @@ public class TelefonoDialog extends Dialog<Telefono> implements Initializable {
 		setTitle("Nuevo teléfono");
 		setHeaderText("Introduzca el nuevo número de teléfono");
 		getDialogPane().setContent(view);
-
+		
 		//init buttons
 		ButtonType addButtonType = new ButtonType("Añadir", ButtonData.OK_DONE);
 		getDialogPane().getButtonTypes().addAll(addButtonType, ButtonType.CANCEL);
