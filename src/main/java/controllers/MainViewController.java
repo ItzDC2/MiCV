@@ -174,7 +174,6 @@ public class MainViewController implements Initializable {
 				ex.printStackTrace();
 			}
 		}
-		guardando = false;
 	}
 	
 	@FXML
